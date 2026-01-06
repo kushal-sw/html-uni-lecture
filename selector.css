@@ -1,0 +1,15 @@
+h1, h3 {
+    background-color: blue;
+}
+
+#main{
+    color: rgb(237, 2, 2);
+}
+.kushal{
+    color: brown;
+}
+
+*{
+    margin: 30;
+    padding: 30px;
+}
