@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Shop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background-color: #b8d4d4;
+        }
+
+        /* Header */
+        header {
+            background-color: #f0f0f0;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #4a3c3c;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 20px;
+            color: #4a3c3c;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 28px;
+            height: 28px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #4a3c3c;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('coffe.png') center center no-repeat;
+            background-size: cover;
+            color: white;
+            padding: 50px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            display: none;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 28px;
+            font-style: italic;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #f0e6d6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .learn-more-btn {
+            background-color: #6b4423;
+            color: white;
+            padding: 8px 22px;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', serif;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #8b5a2b;
+        }
+
+        .hero-bg-image {
+            display: none;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 25px 35px;
+            background-color: #b8d4d4;
+        }
+
+        /* About & Specialties Section */
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #4a3c3c;
+        }
+
+        .about-box, .specialties-box {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 16px;
+            color: #4a3c3c;
+            border-bottom: 2px solid #4a3c3c;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .about-box p {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .specialties-box ul {
+            list-style: none;
+        }
+
+        .specialties-box li {
+            padding: 5px 0;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .specialties-box li span {
+            font-size: 14px;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            text-align: center;
+        }
+
+        .menu-title {
+            font-size: 18px;
+            color: #4a3c3c;
+            border-bottom: 2px solid #4a3c3c;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .menu-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            text-align: left;
+        }
+
+        .menu-column {
+            flex: 1;
+        }
+
+        .menu-column h4 {
+            font-size: 15px;
+            color: #4a3c3c;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .menu-column ul {
+            list-style: disc;
+            padding-left: 18px;
+        }
+
+        .menu-column li {
+            padding: 3px 0;
+            font-size: 13px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4a3c3c;
+            color: #d4c4b0;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+        <span style="font-size: 22px;">☕</span>
+        <span>Coffee Shop</span>
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-left">
+        <div class="hero-image">
+            <img src="Screenshot 2026-01-23 at 1.43.53 PM.png" alt="Coffee Cup">
+        </div>
+        <div class="hero-content">
+            <h2>Welcome to Our Coffee Shop</h2>
+            <p>The best coffee in town!</p>
+            <a href="https://www.cafecoffeeday.com/" class="learn-more-btn" target="_blank">Learn More</a>
+            
+        </div>
+    </div>
+    <div class="hero-bg-image">
+        <img src="Screenshot 2026-01-23 at 1.44.10 PM.png" alt="Coffee Background">
+    </div>
+</section>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- About Us & Our Specialties -->
+    <div class="info-section">
+        <div class="about-box">
+            <h3 class="section-title">About Us</h3>
+            <p>
+                We are a cozy coffee shop dedicated to serving fresh, delicious coffee and tasty pastries. Come relax and enjoy the perfect cup of coffee with us.
+            </p>
+        </div>
+
+        <div class="specialties-box">
+            <h3 class="section-title">Our Specialties</h3>
+            <ul>
+                <li><span>☕</span> Fresh Brewed Coffee</li>
+                <li><span>🍵</span> Espresso Drinks</li>
+                <li><span>🥐</span> Homemade Pastries</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Our Menu -->
+    <div class="menu-section">
+        <h3 class="menu-title">Our Menu</h3>
+        <div class="menu-columns">
+            <div class="menu-column">
+                <h4>Coffee</h4>
+                <ul>
+                    <li>Latte</li>
+                    <li>Cappuccino</li>
+                    <li>Americano</li>
+                </ul>
+            </div>
+
+            <div class="menu-column">
+                <h4>Tea</h4>
+                <ul>
+                    <li>Green Tea</li>
+                    <li>Black Tea</li>
+                    <li>Herbal Tea</li>
+                </ul>
+            </div>
+
+            <div class="menu-column">
+                <h4>Pastries</h4>
+                <ul>
+                    <li>Croissant</li>
+                    <li>Muffin</li>
+                    <li>Bagel</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2022 Coffee Shop. All rights reserved.
+</footer>
+
+</body>
+</html>

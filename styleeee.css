@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3eadb;
+    padding: 10px 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f4ef;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+input {
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}
+h1 {
+    text-align: left;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #333;
+}
+h2 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #614e4e;
+}
+h3 {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #614e4e;
+}
+button {
+    padding: 5px 10px;
+    color : white;
+    background-color: #614e4e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+th {
+    text-align: center;
+    padding: 100px;
+}
